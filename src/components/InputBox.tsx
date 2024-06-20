@@ -9,10 +9,9 @@ const InputBox = () => {
   const [inputV, setInputV] = useState('');
   const dispatch = useAppDispatch();
 
-  const handleSubmit = (event: React.FormEvent) => {
-    event.preventDefault();
+  
     dispatch(addFroggy(inputV));
-  };
+  
 
 
   return (
@@ -29,7 +28,7 @@ const InputBox = () => {
         <p>9</p>
         <p>10</p>
       </Box>
-      <Box className="inputBox" component="form" onSubmit={handleSubmit}>
+      <Box className="inputBox" component="form" >
         <p>#pond {'{'}</p>
         <p className="flex">display: flex;</p>
         <Input value={inputV} onChange={(e) => setInputV(e.target.value)} />

@@ -3,8 +3,11 @@ import { FC } from 'react';
 
 interface InstructionPropsType {
   classes: {
-    first: string;
-    second: string;
+    first?: string;
+    second?: string;
+    third?: string;
+    four?: string;
+    five?: string;
   };
   instruction: {
     welcomeText: string;
@@ -46,7 +49,7 @@ const Instruction: FC<InstructionPropsType> = ({
   spaceBetween,
   spaceAround,
   justifyContent,
-  classes
+  classes,
 }) => {
   return (
     <MuiBox>
@@ -86,7 +89,8 @@ const Instruction: FC<InstructionPropsType> = ({
         </li>
       </ul>
       <h3 className={`${classes.first} ${classes.second}`}>
-        {justifyContent?.forExample} <span className={classes.second}>{justifyContent?.styleText}</span>{' '}
+        {justifyContent?.forExample}{' '}
+        <span className={classes.second}>{justifyContent?.styleText}</span>{' '}
         {justifyContent?.mainText}
       </h3>
     </MuiBox>
@@ -115,13 +119,13 @@ const MuiBox = styled(Box)`
     }
   }
   ul {
-    margin-bottom: .9375rem;
+    margin-bottom: 0.9375rem;
     margin-left: 3.125rem;
   }
   li {
     font-size: 1.0437rem;
     color: #d9ebd6;
-    margin-bottom: .375rem;
+    margin-bottom: 0.375rem;
   }
   ul li p span {
     border: none;
@@ -135,7 +139,7 @@ const MuiBox = styled(Box)`
     font-size: 1.0437rem;
     color: #d9ebd6;
     margin-bottom: 1.25rem;
-   .leverFirstSecond {
+    .leverFirstSecond {
       border: none;
       padding-bottom: 2px;
       font-weight: 900;
@@ -143,5 +147,8 @@ const MuiBox = styled(Box)`
       padding-right: 2px;
       padding-left: 2px;
     }
+  }
+  .leverSecondFirst {
+    margin-top: 40px;
   }
 `;

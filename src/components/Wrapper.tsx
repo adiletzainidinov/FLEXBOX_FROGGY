@@ -14,7 +14,7 @@ const Wrapper: FC = () => {
     <>
       {FLEXBOX_FROGGY.map((i) => (
         <MuiBox key={i.id}>
-          <Header levelInput={i.levelInput} />
+          <Header level={i.level} />
           <Instruction
             classes={i.classes}
             instruction={i.instruction}
@@ -30,9 +30,10 @@ const Wrapper: FC = () => {
           <Footer />
           <Box className="blueBox">
             <SideBar
-              style={i.style as React.CSSProperties}
+              classes={i.classes}
               sideBar={i.sideBar}
               froggyGreenMain={i.froggyGreenMain}
+              froggyGreenYellow={i.froggyGreenYellow}
             />
           </Box>
         </MuiBox>

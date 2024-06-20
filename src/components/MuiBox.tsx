@@ -32,8 +32,23 @@ const StyledBox = styled(Box)`
   position: relative;
   z-index: 2;
   margin-right: 15px;
-  width: 100%;
+  width: 98.4%;
   height: 100%;
+  .leverFirstFirst .FroggyGreen {
+    display: block;
+  }
+  .leverSecondFirst .FroggyGreen {
+    display: block;
+  }
+  .leverSecondSecond .FroggyYellow {
+    display: block;
+  }
+  .leverSecondFirst .FroggyGreen {
+    margin-right: 40px;
+  }
+  .leverSecondSecond .FroggyYellow {
+    margin-left: 40px;
+  }
 `;
 
 export default MuiBox;
