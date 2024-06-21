@@ -1,39 +1,70 @@
 import { Box, styled } from '@mui/material';
 import { Input } from './UI/Input';
 import { Button } from './UI/Button';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAppDispatch } from '../hooks/hooks';
-import { addFroggy } from '../store/slices/froggySlice/froggySlice';
+import {
+  addFroggy,
+  levelCountValue,
+} from '../store/slices/froggySlice/froggySlice';
+import { FLEXBOX_FROGGY } from '../data/data';
 
-const InputBox = () => {
-  const [inputV, setInputV] = useState('');
+interface InputBoxProps {
+  levelCount: number;
+}
+
+const InputBox: React.FC<InputBoxProps> = ({ levelCount }) => {
   const dispatch = useAppDispatch();
+  const [inputV, setInputV] = useState('');
+  const [levelCountChange, setLevelCountChange] = useState(levelCount);
+  const [isCorrect, setIsCorrect] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
 
-  
-    dispatch(addFroggy(inputV));
-  
+  dispatch(addFroggy(inputV));
 
+  const currentLevel = FLEXBOX_FROGGY.find(
+    (level) => level.level === levelCountChange
+  );
+
+  useEffect(() => {
+    if (currentLevel) {
+      const correctAnswers = Object.values(currentLevel.correctAnswer);
+      const isCorrectAnswer = correctAnswers.includes(inputV.trim());
+      setIsDisabled(!isCorrectAnswer);
+      setIsCorrect(isCorrectAnswer);
+    }
+  }, [inputV, levelCountChange, currentLevel]);
+
+  const handlerLevelCount = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (isCorrect && !isDisabled) {
+      if (levelCountChange < FLEXBOX_FROGGY.length) {
+        const newLevelCount = levelCountChange + 1;
+        setLevelCountChange(newLevelCount);
+        dispatch(levelCountValue(newLevelCount));
+      } else {
+        console.log('All levels completed');
+      }
+      setInputV('');
+    }
+  };
 
   return (
     <BoxMui>
       <Box className="numberBox">
-        <p>1</p>
-        <p>2</p>
-        <p>3</p>
-        <p>4</p>
-        <p>5</p>
-        <p>6</p>
-        <p>7</p>
-        <p>8</p>
-        <p>9</p>
-        <p>10</p>
+        {FLEXBOX_FROGGY.map((item) => (
+          <p key={item.level}>{item.level}</p>
+        ))}
       </Box>
-      <Box className="inputBox" component="form" >
+      <Box className="inputBox" component="form" onSubmit={handlerLevelCount}>
         <p>#pond {'{'}</p>
         <p className="flex">display: flex;</p>
         <Input value={inputV} onChange={(e) => setInputV(e.target.value)} />
         <p className="figure">{'}'}</p>
-        <Button type="submit">Следующий</Button>
+        <Button type="submit" disabled={isDisabled}>
+          Следующий
+        </Button>
       </Box>
     </BoxMui>
   );

@@ -21,9 +21,6 @@ const MuiBox: FC<MuiBoxProps> = ({ children }) => {
       return acc;
     }, {} as Record<string, string>);
 
-  console.log(customStyles, 'custom');
-  console.log(inputValue, 'in');
-
   return <StyledBox style={customStyles}>{children}</StyledBox>;
 };
 

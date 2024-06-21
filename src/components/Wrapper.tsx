@@ -6,38 +6,41 @@ import Instruction from './Instruction';
 import InputBox from './InputBox';
 import Footer from './Footer';
 import SideBar from './SideBar';
+import { useAppSelector } from '../hooks/hooks';
 
 const Wrapper: FC = () => {
-  
+  const { levelCount } = useAppSelector((state) => state.froggy);
+  // console.log(levelCount,'levelcount');
 
   return (
     <>
-      {FLEXBOX_FROGGY.map((i) => (
-        <MuiBox key={i.id}>
-          <Header level={i.level} />
-          <Instruction
-            classes={i.classes}
-            instruction={i.instruction}
-            flexStart={i.flexStart}
-            flexEnd={i.flexEnd}
-            center={i.center}
-            spaceBetween={i.spaceBetween}
-            spaceAround={i.spaceAround}
-            justifyContent={i.justifyContent}
-          />
-
-          <InputBox />
-          <Footer />
-          <Box className="blueBox">
-            <SideBar
+      {FLEXBOX_FROGGY.map((i) =>
+        levelCount === i.level ? (
+          <MuiBox key={i.id}>
+            <Header level={i.level} />
+            <Instruction
               classes={i.classes}
-              sideBar={i.sideBar}
-              froggyGreenMain={i.froggyGreenMain}
-              froggyGreenYellow={i.froggyGreenYellow}
+              instruction={i.instruction}
+              flexStart={i.flexStart}
+              flexEnd={i.flexEnd}
+              center={i.center}
+              spaceBetween={i.spaceBetween}
+              spaceAround={i.spaceAround}
+              justifyContent={i.justifyContent}
             />
-          </Box>
-        </MuiBox>
-      ))}
+            <InputBox levelCount={levelCount} />
+            <Footer />
+            <Box className="blueBox">
+              <SideBar
+                classes={i.classes}
+                sideBar={i.sideBar}
+                froggyGreenMain={i.froggyGreenMain}
+                froggyGreenYellow={i.froggyGreenYellow}
+              />
+            </Box>
+          </MuiBox>
+        ) : null
+      )}
     </>
   );
 };
