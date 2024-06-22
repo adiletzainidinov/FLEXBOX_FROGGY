@@ -8,6 +8,7 @@ import {
   levelCountValue,
 } from '../store/slices/froggySlice/froggySlice';
 import { FLEXBOX_FROGGY } from '../data/data';
+import { number } from '../helpers/helpers';
 
 interface InputBoxProps {
   levelCount: number;
@@ -49,12 +50,13 @@ const InputBox: React.FC<InputBoxProps> = ({ levelCount }) => {
       setInputV('');
     }
   };
+  const numberArray = Object.values(number);
 
   return (
     <BoxMui>
       <Box className="numberBox">
-        {FLEXBOX_FROGGY.map((item) => (
-          <p key={item.level}>{item.level}</p>
+        {numberArray.map((num, index) => (
+          <p key={index}>{num}</p>
         ))}
       </Box>
       <Box className="inputBox" component="form" onSubmit={handlerLevelCount}>

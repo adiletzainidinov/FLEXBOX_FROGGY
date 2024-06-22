@@ -3,16 +3,18 @@ import { FC } from 'react';
 import LilipudGreenMain from '../assets/images/LilipudGreenMain';
 import FrogGreen from '../assets/images/FrogGreen';
 import FrogYellow from '../assets/images/FrogYellow';
+import FrogRed from '../assets/images/FrogRed';
 
 export interface FlexboxFroggyLevel {
-  id: string;
-  level: number;
+  id?: string;
+  level?: number;
   classes: {
     first?: string | undefined;
     second?: string | undefined;
     third?: string | undefined;
     four?: string | undefined;
     five?: string | undefined;
+    six?: string | undefined;
   };
   correctAnswer: {
     first?: string;
@@ -55,11 +57,17 @@ export interface FlexboxFroggyLevel {
     mainText?: string;
     styleText?: string;
   };
+  justifyContentEnd: {
+    mainText: string;
+    styleText: string;
+    dot: string;
+  };
   sideBar: {
     lilipads: FC[];
   };
   froggyGreenMain: FC;
   froggyGreenYellow: FC;
+  froggyGreenRed: FC;
 }
 
 export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
@@ -72,6 +80,7 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       third: 'leverFirstThird',
       four: 'leverFirstFour',
       five: 'leverFirstFive',
+      six: 'leverFirstSix',
     },
     correctAnswer: {
       first: 'justify-content: end',
@@ -111,11 +120,17 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       mainText: 'сдвинет лягушонка вправо.',
       styleText: 'justify-content: flex-end;',
     },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
     sideBar: {
       lilipads: [LilipudGreenMain],
     },
     froggyGreenMain: FrogGreen,
     froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
   },
   {
     id: uuidv4(),
@@ -126,6 +141,7 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       third: 'leverSecondThird',
       four: 'leverSecondFour',
       five: 'leverSecondtFive',
+      six: 'leverSecondSix',
     },
     correctAnswer: {
       first: 'justify-content: center;',
@@ -164,11 +180,17 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       mainText: '',
       styleText: '',
     },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
     sideBar: {
       lilipads: [LilipudGreenMain],
     },
     froggyGreenMain: FrogGreen,
     froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
   },
   {
     id: uuidv4(),
@@ -179,6 +201,7 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       third: 'leverThirdThird',
       four: 'leverThirdFour',
       five: 'leverThirdFive',
+      six: 'leverThirdSix',
     },
     correctAnswer: {
       first: 'justify-content: space-around;',
@@ -187,13 +210,14 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'none',
     },
     instruction: {
-      welcomeText: 'Помоги всем трём лягушатам найти их лилии, просто используя',
+      welcomeText:
+        'Помоги всем трём лягушатам найти их лилии, просто используя',
       justifyContentStyle: 'justify-content',
       welcomeTextFoot: 'В этот раз у лилий много пространства вокруг.',
     },
     flexStart: {
-      mainText: 'Если ты чувствуешь, что забыл возможные значения свойства, ты можешь навести курсор на название свойства, чтобы посмотреть их. Попробуй навести курсор на ',
-      styleText: 'justify-content',
+      mainText: '',
+      styleText: '',
     },
     flexEnd: {
       mainText: '',
@@ -216,10 +240,139 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       mainText: '',
       styleText: '',
     },
+    justifyContentEnd: {
+      mainText:
+        'Если ты чувствуешь, что забыл возможные значения свойства, ты можешь навести курсор на название свойства, чтобы посмотреть их. Попробуй навести курсор на',
+      styleText: 'justify-content',
+      dot: '.',
+    },
     sideBar: {
       lilipads: [LilipudGreenMain],
     },
     froggyGreenMain: FrogGreen,
     froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  {
+    id: uuidv4(),
+    level: 4,
+    classes: {
+      first: 'leverFourFirst',
+      second: 'leverFourSecond',
+      third: 'leverFourThird',
+      four: 'leverFourFour',
+      five: 'leverFourFive',
+      six: 'leverFourSix',
+    },
+    correctAnswer: {
+      first: 'justify-content: space-between;',
+      second: 'justify-content: space-between',
+      third: 'none',
+      four: 'none',
+    },
+    instruction: {
+      welcomeText:
+        'Теперь лилии по краям уплыли к берегам, увеличив пространство между ними. Используй',
+      justifyContentStyle: 'justify-content',
+      welcomeTextFoot: 'В этот раз у лилий одинаковое расстояние между ними.',
+    },
+    flexStart: {
+      mainText: '',
+      styleText: '',
+    },
+    flexEnd: {
+      mainText: '',
+      styleText: '',
+    },
+    center: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceBetween: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceAround: {
+      mainText: '',
+      styleText: '',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText:
+        '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  {
+    id: uuidv4(),
+    level: 5,
+    classes: {
+      first: 'leverFiveFirst',
+      second: 'leverFiveSecond',
+      third: 'leverFiveThird',
+      four: 'leverFiveFour',
+      five: 'leverFiveFive',
+      six: 'leverFiveSix',
+    },
+    correctAnswer: {
+      first: 'align-items: end;',
+      second: 'align-items: end',
+      third: 'none',
+      four: 'none',
+    },
+    instruction: {
+      welcomeText:
+        'Теперь используй',
+      justifyContentStyle: 'align-items',
+      welcomeTextFoot: ', чтобы помочь лягушатам добраться до нижней части пруда. Это свойство CSS выравнивает элементы вертикально и принимает следующие значения:',
+    },
+    flexStart: {
+      mainText: ': элементы выравниваются по верхнему краю контейнера.',
+      styleText: 'flex-start',
+    },
+    flexEnd: {
+      mainText: ': элементы выравниваются по нижнему краю контейнера.',
+      styleText: 'flex-end',
+    },
+    center: {
+      mainText: ': элементы выравниваются вертикально по центру контейнера.',
+      styleText: 'center',
+    },
+    spaceBetween: {
+      mainText: ': элементы отображаются на базовой линии контейнера.',
+      styleText: 'baseline',
+    },
+    spaceAround: {
+      mainText: ': элементы растягиваются, чтобы заполнить контейнер.',
+      styleText: 'stretch',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText:
+        '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
   },
 ];

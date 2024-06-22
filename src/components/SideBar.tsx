@@ -16,8 +16,10 @@ interface SideBarProps {
     third?: string;
     four?: string;
     five?: string;
+    six?: string;
   };
   froggyGreenYellow: FC;
+  froggyGreenRed: FC;
 }
 
 const SideBar: FC<SideBarProps> = ({
@@ -25,25 +27,27 @@ const SideBar: FC<SideBarProps> = ({
   classes,
   froggyGreenMain,
   froggyGreenYellow,
+  froggyGreenRed,
 }) => {
   const { inputValue } = useAppSelector((state) => state.froggy);
 
   const FroggyGreenMainWithClass = withClassName(froggyGreenMain);
   const FroggyGreenYellowWithClass = withClassName(froggyGreenYellow);
+  const FroggyGreenRedWithClass = withClassName(froggyGreenRed);
 
   return (
     <Box style={{ width: '100%', height: '100%' }}>
-      <MuiBox inputValue={inputValue}>
+      <MuiBox className={classes.six} inputValue={inputValue}>
         <FroggyGreenMainWithClass className={classes.first} />
         <FroggyGreenYellowWithClass className={classes.second} />
-        <FroggyGreenMainWithClass className={classes.third} />
+        <FroggyGreenRedWithClass className={classes.third} />
         <FroggyGreenMainWithClass className={classes.four} />
         <FroggyGreenMainWithClass className={classes.five} />
       </MuiBox>
       {sideBar.lilipads.map((LilyPadComponent, index) => {
         const LilyPadWithClass = withClassName(LilyPadComponent);
         return (
-          <LilipadsBox key={index}>
+          <LilipadsBox className={classes.six} key={index}>
             <LilyPadWithClass className={classes.first} />
             <LilyPadWithClass className={classes.second} />
             <LilyPadWithClass className={classes.third} />

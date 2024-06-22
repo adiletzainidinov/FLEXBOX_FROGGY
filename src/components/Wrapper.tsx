@@ -27,6 +27,7 @@ const Wrapper: FC = () => {
               spaceBetween={i.spaceBetween}
               spaceAround={i.spaceAround}
               justifyContent={i.justifyContent}
+              justifyContentEnd={i.justifyContentEnd}
             />
             <InputBox levelCount={levelCount} />
             <Footer />
@@ -36,6 +37,7 @@ const Wrapper: FC = () => {
                 sideBar={i.sideBar}
                 froggyGreenMain={i.froggyGreenMain}
                 froggyGreenYellow={i.froggyGreenYellow}
+                froggyGreenRed={i.froggyGreenRed}
               />
             </Box>
           </MuiBox>

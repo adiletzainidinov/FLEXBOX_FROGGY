@@ -6,9 +6,10 @@ import { useAppSelector } from '../hooks/hooks';
 interface MuiBoxProps {
   inputValue: string;
   children?: ReactNode;
+  className: string | undefined;
 }
 
-const MuiBox: FC<MuiBoxProps> = ({ children }) => {
+const MuiBox: FC<MuiBoxProps> = ({ children, className }) => {
   const { inputValue } = useAppSelector((state) => state.froggy);
 
   const customStyles: Record<string, string> = inputValue
@@ -21,7 +22,11 @@ const MuiBox: FC<MuiBoxProps> = ({ children }) => {
       return acc;
     }, {} as Record<string, string>);
 
-  return <StyledBox style={customStyles}>{children}</StyledBox>;
+  return (
+    <StyledBox className={className} style={customStyles}>
+      {children}
+    </StyledBox>
+  );
 };
 
 const StyledBox = styled(Box)`
@@ -31,20 +36,82 @@ const StyledBox = styled(Box)`
   margin-right: 15px;
   width: 98.4%;
   height: 100%;
-  .leverFirstFirst .FroggyGreen {
+
+  // Froggy All Block
+
+  .leverFirstFirst .FroggyGreen,
+  .leverSecondFirst .FroggyGreen,
+  .leverSecondSecond .FroggyYellow,
+  .leverThirdFirst .FroggyGreen,
+  .leverThirdSecond .FroggyYellow,
+  .leverThirdThird .FrogRed,
+  .leverFourFirst .FroggyGreen,
+  .leverFourSecond .FroggyYellow,
+  .leverFourThird .FrogRed,
+  .leverFiveFirst .FroggyGreen,
+  .leverFiveSecond .FroggyYellow,
+  .leverFiveThird .FrogRed {
     display: block;
   }
-  .leverSecondFirst .FroggyGreen {
-    display: block;
-  }
-  .leverSecondSecond .FroggyYellow {
-    display: block;
-  }
+
+  // level Second-style
+
   .leverSecondFirst .FroggyGreen {
     margin-right: 40px;
   }
   .leverSecondSecond .FroggyYellow {
     margin-left: 40px;
+  }
+
+  // level Third-style
+
+  .leverThirdSecond .FroggyYellow,
+  .leverThirdThird .FrogRed {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .leverThirdFirst .FroggyGreen {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .leverThirdThird .FrogRed {
+    margin-top: 30px;
+  }
+  .leverThirdFour,
+  .leverThirdFive {
+    display: none;
+  }
+
+  // level Four-style
+
+  .leverFourFour,
+  .leverFourFive {
+    display: none;
+  }
+  .leverFourThird .FrogRed {
+    margin-top: 10px;
+  }
+  .leverFourSecond .FroggyYellow,
+  .leverFourThird .FrogRed {
+    margin-left: 40px;
+  }
+
+  // level Five-style 
+  
+  .leverFiveFirst .FroggyGreen,
+  .leverFiveSecond .FroggyYellow,
+  .leverFiveThird .FrogRed {
+    margin-left: 50px;
+  }
+    .leverFiveFirst .FroggyGreen {
+      margin-left: 20px;
+    }
+    .leverFiveThird .FrogRed {
+      margin-top: 10px;
+    }
+    .leverFiveFour,
+  .leverFiveFive {
+    display: none;
   }
 `;
 

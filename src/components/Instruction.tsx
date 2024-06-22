@@ -39,6 +39,11 @@ interface InstructionPropsType {
     mainText?: string;
     styleText?: string;
   };
+  justifyContentEnd: {
+    mainText: string;
+    styleText: string;
+    dot: string;
+  };
 }
 
 const Instruction: FC<InstructionPropsType> = ({
@@ -50,6 +55,7 @@ const Instruction: FC<InstructionPropsType> = ({
   spaceAround,
   justifyContent,
   classes,
+  justifyContentEnd,
 }) => {
   return (
     <MuiBox>
@@ -57,7 +63,7 @@ const Instruction: FC<InstructionPropsType> = ({
         {instruction.welcomeText} <span>{instruction.justifyContentStyle}</span>{' '}
         {instruction.welcomeTextFoot}
       </h2>
-      <ul>
+      <ul className={classes.first}>
         <li>
           <p>
             <span> {flexStart.styleText}</span>
@@ -85,6 +91,13 @@ const Instruction: FC<InstructionPropsType> = ({
           <p>
             <span>{spaceAround.styleText}</span>
             {spaceAround.mainText}
+          </p>
+        </li>
+        <li className={classes.third}>
+          <p>
+            {justifyContentEnd.mainText}{' '}
+            <span>{justifyContentEnd.styleText}</span>
+            {justifyContentEnd.dot}
           </p>
         </li>
       </ul>
@@ -150,5 +163,30 @@ const MuiBox = styled(Box)`
   }
   .leverSecondFirst {
     margin-top: 40px;
+  }
+  .leverThirdFirst li,
+  .leverFourFirst li {
+    display: none;
+  }
+  .leverFirstThird,
+  .leverSecondThird {
+    display: none;
+  }
+  .leverThirdFirst .leverThirdThird {
+    display: block;
+    position: relative;
+    width: 722px;
+    right: 50px;
+    color: #d9ebd6;
+    font-size: 1.0437rem;
+    margin-bottom: 40px;
+  }
+
+  // level Five-style
+  .leverFiveThird {
+    display: none;
+  }
+  .leverFiveFirst {
+    margin-bottom: 40px;
   }
 `;
