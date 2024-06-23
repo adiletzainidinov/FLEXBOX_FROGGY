@@ -29,7 +29,7 @@ const InputBox: React.FC<InputBoxProps> = ({ levelCount }) => {
 
   useEffect(() => {
     if (currentLevel) {
-      const correctAnswers = Object.values(currentLevel.correctAnswer);
+      const correctAnswers = Object.values(currentLevel.correctAnswer).flat();
       const isCorrectAnswer = correctAnswers.includes(inputV.trim());
       setIsDisabled(!isCorrectAnswer);
       setIsCorrect(isCorrectAnswer);
@@ -50,6 +50,7 @@ const InputBox: React.FC<InputBoxProps> = ({ levelCount }) => {
       setInputV('');
     }
   };
+
   const numberArray = Object.values(number);
 
   return (

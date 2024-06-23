@@ -50,7 +50,13 @@ const StyledBox = styled(Box)`
   .leverFourThird .FrogRed,
   .leverFiveFirst .FroggyGreen,
   .leverFiveSecond .FroggyYellow,
-  .leverFiveThird .FrogRed {
+  .leverFiveThird .FrogRed,
+  .leverSevenFirst .FroggyGreen,
+  .leverSevenSecond .FroggyYellow,
+  .leverSevenThird .FrogRed,
+  .leverEightFirst .FroggyGreen,
+  .leverEightSecond .FroggyYellow,
+  .leverEightThird .FrogRed {
     display: block;
   }
 
@@ -112,6 +118,26 @@ const StyledBox = styled(Box)`
     .leverFiveFour,
   .leverFiveFive {
     display: none;
+  }
+
+  // level Six-style
+
+  .leverSixFirst .FroggyGreen {
+    display: block;
+  }
+  .leverSevenFour,
+  .leverSevenFive {
+    display: none;
+
+  }
+
+  // level Eight-style
+
+ .leverEightFirst .FroggyGreen,
+  .leverEightSecond .FroggyYellow,
+  .leverEightThird .FrogRed  {
+    margin-left: 50px;
+    margin-top: 10px;
   }
 `;
 

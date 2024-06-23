@@ -10,7 +10,6 @@ import { useAppSelector } from '../hooks/hooks';
 
 const Wrapper: FC = () => {
   const { levelCount } = useAppSelector((state) => state.froggy);
-  // console.log(levelCount,'levelcount');
 
   return (
     <>
@@ -28,6 +27,8 @@ const Wrapper: FC = () => {
               spaceAround={i.spaceAround}
               justifyContent={i.justifyContent}
               justifyContentEnd={i.justifyContentEnd}
+              instructionFiveKey={i.instructionFiveKey}
+              instructionSevenKey={i.instructionSevenKey}
             />
             <InputBox levelCount={levelCount} />
             <Footer />

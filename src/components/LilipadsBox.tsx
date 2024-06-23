@@ -111,4 +111,62 @@ const LilipadsBoxContainer = styled(Box)`
     background-color: #cf1a17;
     right: 320px;
   }
+
+  // level Six-style
+
+  .leverSixFirst .LilipudGreenMain {
+    display: block;
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 325px;
+    left: 312px;
+  }
+
+  // level Seven-style
+
+  .leverSevenFirst .LilipudGreenMain,
+  .leverSevenSecond .LilipudGreenMain,
+  .leverSevenThird .LilipudGreenMain {
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    bottom: 15px;
+  }
+  .leverSevenFirst .LilipudGreenMain {
+    left: 80px;
+  }
+  .leverSevenSecond .LilipudGreenMain {
+    left: 313px;
+    background-color: #c4c403;
+  }
+  .leverSevenThird .LilipudGreenMain {
+    right: 90px;
+    background-color: #cf1a17;
+  }
+
+  // level Eight-Style
+  .leverEightFirst .LilipudGreenMain,
+  .leverEightSecond .LilipudGreenMain,
+  .leverEightThird .LilipudGreenMain {
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 15px;
+  }
+  .leverEightThird .LilipudGreenMain {
+    right: 22px;
+  }
+  .leverEightSecond .LilipudGreenMain {
+    right: 162px;
+    background-color: #c4c403;
+  }
+  .leverEightFirst .LilipudGreenMain {
+    left: 340px;
+    background-color: #cf1a17;
+
+  }
 `;

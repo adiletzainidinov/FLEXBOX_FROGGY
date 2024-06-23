@@ -8,6 +8,7 @@ interface InstructionPropsType {
     third?: string;
     four?: string;
     five?: string;
+    six?: string;
   };
   instruction: {
     welcomeText: string;
@@ -44,6 +45,22 @@ interface InstructionPropsType {
     styleText: string;
     dot: string;
   };
+  instructionFiveKey: {
+    mainText: string;
+    styleText: string;
+    justText: string;
+    styleTextSecond: string;
+    justTextSecond: string;
+  };
+  instructionSevenKey: {
+    mainText: string;
+    styleText: string;
+    justText: string;
+    styleTextSecond: string;
+    justTextSecond: string;
+    styleTextThird: string;
+    justTextThird: string;
+  };
 }
 
 const Instruction: FC<InstructionPropsType> = ({
@@ -56,12 +73,30 @@ const Instruction: FC<InstructionPropsType> = ({
   justifyContent,
   classes,
   justifyContentEnd,
+  instructionFiveKey,
+  instructionSevenKey,
 }) => {
   return (
     <MuiBox>
-      <h2>
+      <h2 className={classes.six}>
         {instruction.welcomeText} <span>{instruction.justifyContentStyle}</span>{' '}
         {instruction.welcomeTextFoot}
+      </h2>
+      <h2 className={classes.four}>
+        {instructionFiveKey.mainText}{' '}
+        <span>{instructionFiveKey.styleText}</span>{' '}
+        {instructionFiveKey.justText}{' '}
+        <span>{instructionFiveKey.styleTextSecond}</span>
+        {instructionFiveKey.justTextSecond}
+      </h2>
+      <h2 className={classes.five}>
+        {instructionSevenKey.mainText}{' '}
+        <span>{instructionSevenKey.styleText}</span>{' '}
+        {instructionSevenKey.justTextSecond}{' '}
+        <span>{instructionSevenKey.styleTextSecond}</span>{' '}
+        {instructionSevenKey.justTextSecond}{' '}
+        <span>{instructionSevenKey.styleTextThird}</span>{' '}
+        {instructionSevenKey.justTextThird}
       </h2>
       <ul className={classes.first}>
         <li>
@@ -87,13 +122,13 @@ const Instruction: FC<InstructionPropsType> = ({
             <span>{spaceBetween.styleText}</span> {spaceBetween.mainText}
           </p>
         </li>
-        <li>
+        <li className={`${classes.first} ${classes.second}`}>
           <p>
             <span>{spaceAround.styleText}</span>
             {spaceAround.mainText}
           </p>
-        </li>
-        <li className={classes.third}>
+        </li >
+        <li className={`${classes.third} ${classes.four} ${classes.five}`}>
           <p>
             {justifyContentEnd.mainText}{' '}
             <span>{justifyContentEnd.styleText}</span>
@@ -116,6 +151,28 @@ const MuiBox = styled(Box)`
   width: 45%;
   margin-left: 20px;
   margin-top: 1.25rem;
+
+  // instruction style
+
+  .leverFirstFour,
+  .leverFirstFive,
+  .leverSecondFour,
+  .leverSecondtFive,
+  .leverThirdFour,
+  .leverThirdFive,
+  .leverFourFour,
+  .leverFourFive,
+  .leverFiveFour,
+  .leverFiveFive,
+  .leverSixSix,
+  .leverSixFive,
+  .leverSevenFive,
+  .leverSevenSix,
+  .leverEightFive,
+  .leverEightFour {
+    display: none;
+  }
+
   h2 {
     font-size: 1.0437rem;
     color: #d9ebd6;
@@ -165,13 +222,18 @@ const MuiBox = styled(Box)`
     margin-top: 40px;
   }
   .leverThirdFirst li,
-  .leverFourFirst li {
+  .leverFourFirst li,
+  .leverSixFirst li,
+  .leverSevenFirst li {
     display: none;
   }
   .leverFirstThird,
   .leverSecondThird {
     display: none;
   }
+
+  // level Third-style
+
   .leverThirdFirst .leverThirdThird {
     display: block;
     position: relative;
@@ -189,4 +251,28 @@ const MuiBox = styled(Box)`
   .leverFiveFirst {
     margin-bottom: 40px;
   }
+
+  // level Six-style
+
+  .leverSixFour {
+    margin-bottom: 30px;
+  }
+
+  // level Seven-style
+
+  .leverSevenFour {
+    margin-bottom: 30px;
+  }
+
+    // level Eight-style
+
+  .leverEightFirst .leverEightSecond,
+  .leverEightFour .leverEightFive {
+    display: none;
+  }
+  .leverEightFirst  {
+    margin-bottom: 35px;
+  }
+
+  // level Nine-style
 `;
