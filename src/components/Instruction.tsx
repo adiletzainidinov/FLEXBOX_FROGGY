@@ -9,6 +9,10 @@ interface InstructionPropsType {
     four?: string;
     five?: string;
     six?: string;
+    seven?: string | undefined;
+    eight?: string | undefined;
+    nine?: string | undefined;
+    ten?: string | undefined;
   };
   instruction: {
     welcomeText: string;
@@ -86,7 +90,9 @@ const Instruction: FC<InstructionPropsType> = ({
         {instructionFiveKey.mainText}{' '}
         <span>{instructionFiveKey.styleText}</span>{' '}
         {instructionFiveKey.justText}{' '}
-        <span>{instructionFiveKey.styleTextSecond}</span>
+        <span className={classes.ten}>
+          {instructionFiveKey.styleTextSecond}
+        </span>
         {instructionFiveKey.justTextSecond}
       </h2>
       <h2 className={classes.five}>
@@ -95,11 +101,13 @@ const Instruction: FC<InstructionPropsType> = ({
         {instructionSevenKey.justTextSecond}{' '}
         <span>{instructionSevenKey.styleTextSecond}</span>{' '}
         {instructionSevenKey.justTextSecond}{' '}
-        <span>{instructionSevenKey.styleTextThird}</span>{' '}
+        <span className={classes.nine}>
+          {instructionSevenKey.styleTextThird}
+        </span>{' '}
         {instructionSevenKey.justTextThird}
       </h2>
       <ul className={classes.first}>
-        <li>
+        <li className={classes.seven}>
           <p>
             <span> {flexStart.styleText}</span>
             {flexStart.mainText}
@@ -122,12 +130,12 @@ const Instruction: FC<InstructionPropsType> = ({
             <span>{spaceBetween.styleText}</span> {spaceBetween.mainText}
           </p>
         </li>
-        <li className={`${classes.first} ${classes.second}`}>
+        <li className={classes.eight}>
           <p>
             <span>{spaceAround.styleText}</span>
             {spaceAround.mainText}
           </p>
-        </li >
+        </li>
         <li className={`${classes.third} ${classes.four} ${classes.five}`}>
           <p>
             {justifyContentEnd.mainText}{' '}
@@ -169,7 +177,21 @@ const MuiBox = styled(Box)`
   .leverSevenFive,
   .leverSevenSix,
   .leverEightFive,
-  .leverEightFour {
+  .leverEightFour,
+  .leverNineFour,
+  .leverNineFive,
+  .leverTenFive,
+  .leverTenSix,
+  .leverElevenSix,
+  .levertwelveSix,
+  .levertwelveFive,
+  .leverthirteenFour,
+  .leverthirteenSix,
+  .leverfourteenFive,
+  .leverFiveteenFour,
+  .leverFiveteenFive,
+  .leversixteenSix,
+  .leversixteenFive {
     display: none;
   }
 
@@ -221,10 +243,19 @@ const MuiBox = styled(Box)`
   .leverSecondFirst {
     margin-top: 40px;
   }
+
+  // li none
   .leverThirdFirst li,
   .leverFourFirst li,
   .leverSixFirst li,
-  .leverSevenFirst li {
+  .leverSevenFirst li,
+  .leverTenFirst li,
+  .levertwelveFirst li,
+  .leverElevenFirst li,
+  .leverthirteenFirst li,
+  .leverfourteenFirst li,
+  .leverFiveteenFirst li,
+  .leversixteenFirst li{
     display: none;
   }
   .leverFirstThird,
@@ -264,15 +295,74 @@ const MuiBox = styled(Box)`
     margin-bottom: 30px;
   }
 
-    // level Eight-style
+  // level Eight-style
 
   .leverEightFirst .leverEightSecond,
   .leverEightFour .leverEightFive {
     display: none;
   }
-  .leverEightFirst  {
+  .leverEightFirst {
     margin-bottom: 35px;
+  }
+  .leverEightEight {
+    display: none;
   }
 
   // level Nine-style
+  .leverNineEight {
+    display: none;
+  }
+
+  .leverNineFirst {
+    margin-bottom: 35px;
+  }
+
+  // level Ten-style
+
+  .leverTenFirst .leverTenSeven {
+    display: block;
+  }
+
+  .leverTenSeven {
+    display: block;
+    position: relative;
+    right: 50px;
+    margin-bottom: 30px;
+  }
+  .leverTenSeven span {
+    display: none;
+  }
+
+  // level Eleven-style
+
+  .leverElevenFive .leverElevenNine {
+    display: none;
+  }
+
+  // level twelve-style
+
+  .levertwelveFour {
+    margin-bottom: 40px;
+  }
+
+  // level thirteen-style
+
+  .leverthirteenFive {
+    margin-bottom: 30px;
+  }
+  // level fourteen-style
+
+  .leverfourteenFirst {
+    margin-bottom: 30px;
+  }
+  .leverfourteenFour .leverfourteenTen {
+    display: none;
+  }
+
+  // level sixteen-style
+
+  .leversixteenFour {
+    margin-bottom: 30px;
+  }
+ 
 `;

@@ -54,22 +54,69 @@ const InputBox: React.FC<InputBoxProps> = ({ levelCount }) => {
   const numberArray = Object.values(number);
 
   return (
-    <BoxMui>
-      <Box className="numberBox">
-        {numberArray.map((num, index) => (
-          <p key={index}>{num}</p>
-        ))}
-      </Box>
-      <Box className="inputBox" component="form" onSubmit={handlerLevelCount}>
-        <p>#pond {'{'}</p>
-        <p className="flex">display: flex;</p>
-        <Input value={inputV} onChange={(e) => setInputV(e.target.value)} />
-        <p className="figure">{'}'}</p>
-        <Button type="submit" disabled={isDisabled}>
-          Следующий
-        </Button>
-      </Box>
-    </BoxMui>
+    <>
+      {levelCount === 14 || levelCount === 15 || levelCount === 16 ? (
+        <BoxMui>
+          <Box className="numberBox">
+            {numberArray.map((num, index) => (
+              <p key={index}>{num}</p>
+            ))}
+          </Box>
+          <Box
+            className="inputBox"
+            component="form"
+            onSubmit={handlerLevelCount}
+          >
+            <p>#pond {'{'}</p>
+            <p className="flex">display: flex;</p>
+            <p className="figure">{'}'}</p>
+            <p style={{ marginTop: 30 }}>
+              {levelCount === 14 || levelCount === 16
+                ? '.yellow'
+                : levelCount === 15
+                ? '.red'
+                : ''}{' '}
+              {'{'}
+            </p>
+
+            <Input
+              value={inputV}
+              onChange={(e) => setInputV(e.target.value)}
+              style={{ marginLeft: 10 }}
+            />
+            <p>{'}'}</p>
+            <Button
+              style={{ marginTop: 30 }}
+              type="submit"
+              disabled={isDisabled}
+            >
+              Следующий
+            </Button>
+          </Box>
+        </BoxMui>
+      ) : (
+        <BoxMui>
+          <Box className="numberBox">
+            {numberArray.map((num, index) => (
+              <p key={index}>{num}</p>
+            ))}
+          </Box>
+          <Box
+            className="inputBox"
+            component="form"
+            onSubmit={handlerLevelCount}
+          >
+            <p>#pond {'{'}</p>
+            <p className="flex">display: flex;</p>
+            <Input value={inputV} onChange={(e) => setInputV(e.target.value)} />
+            <p className="figure">{'}'}</p>
+            <Button type="submit" disabled={isDisabled}>
+              Следующий
+            </Button>
+          </Box>
+        </BoxMui>
+      )}
+    </>
   );
 };
 

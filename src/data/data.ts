@@ -15,6 +15,10 @@ export interface FlexboxFroggyLevel {
     four?: string | undefined;
     five?: string | undefined;
     six?: string | undefined;
+    seven?: string | undefined;
+    eight?: string | undefined;
+    nine?: string | undefined;
+    ten?: string | undefined;
   };
   correctAnswer: {
     first?: string;
@@ -98,6 +102,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverFirstFour',
       five: 'leverFirstFive',
       six: 'leverFirstSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'none',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'justify-content: end',
@@ -176,6 +184,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverSecondFour',
       five: 'leverSecondtFive',
       six: 'leverSecondSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'none',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'justify-content: center;',
@@ -253,6 +265,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverThirdFour',
       five: 'leverThirdFive',
       six: 'leverThirdSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'none',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'justify-content: space-around;',
@@ -331,6 +347,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverFourFour',
       five: 'leverFourFive',
       six: 'leverFourSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'none',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'justify-content: space-between;',
@@ -408,6 +428,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverFiveFour',
       five: 'leverFiveFive',
       six: 'leverFiveSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'none',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'align-items: end;',
@@ -485,6 +509,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverSixFour',
       five: 'leverSixFive',
       six: 'leverSixSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'none',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'align-items: center; justify-content: center;',
@@ -564,6 +592,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverSevenFour',
       five: 'leverSevenFive',
       six: 'leverSevenSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'none',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'justify-content: space-around; align-items: end;',
@@ -648,6 +680,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverEightFour',
       five: 'leverEightFive',
       six: 'leverEightSix',
+      seven: 'leverEightSeven',
+      eight: 'leverEightEight',
+      nine: 'none',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'flex-direction: row-reverse;',
@@ -656,13 +692,14 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'none',
     },
     instruction: {
-      welcomeText: 'Лягушатам нужно выстроиться в том же порядке, что и лилии, используя',
+      welcomeText:
+        'Лягушатам нужно выстроиться в том же порядке, что и лилии, используя',
       justifyContentStyle: 'flex-direction',
-      welcomeTextFoot: '. Это свойство CSS задает направление, в котором будут расположены элементы в контейнере, и принимает следующие значения:',
+      welcomeTextFoot:
+        '. Это свойство CSS задает направление, в котором будут расположены элементы в контейнере, и принимает следующие значения:',
     },
     instructionFiveKey: {
-      mainText:
-        '',
+      mainText: '',
       styleText: '',
       justText: '',
       styleTextSecond: '',
@@ -682,7 +719,8 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       styleText: 'row',
     },
     flexEnd: {
-      mainText: ': элементы отображаются в обратном порядке к направлению текста.',
+      mainText:
+        ': элементы отображаются в обратном порядке к направлению текста.',
       styleText: 'row-reverse',
     },
     center: {
@@ -725,6 +763,10 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       four: 'leverNineFour',
       five: 'leverNineFive',
       six: 'leverNineSix',
+      seven: 'none',
+      eight: 'leverNineEight',
+      nine: 'leverNineNine',
+      ten: 'none',
     },
     correctAnswer: {
       first: 'flex-direction: column;',
@@ -735,11 +777,11 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
     instruction: {
       welcomeText: 'Помоги лягушатам расположиться на своих лилиях, используя',
       justifyContentStyle: 'flex-direction',
-      welcomeTextFoot: '. Это свойство CSS задает направление, в котором располагаются элементы в контейнере, и принимает следующие значения:',
+      welcomeTextFoot:
+        '. Это свойство CSS задает направление, в котором располагаются элементы в контейнере, и принимает следующие значения:',
     },
     instructionFiveKey: {
-      mainText:
-        '',
+      mainText: '',
       styleText: '',
       justText: '',
       styleTextSecond: '',
@@ -759,7 +801,8 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       styleText: 'row',
     },
     flexEnd: {
-      mainText: ': элементы отображаются в обратном порядке к направлению текста.',
+      mainText:
+        ': элементы отображаются в обратном порядке к направлению текста.',
       styleText: 'row-reverse',
     },
     center: {
@@ -769,6 +812,611 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
     spaceBetween: {
       mainText: ': элементы распологаются снизу вверх.',
       styleText: 'column-reverse',
+    },
+    spaceAround: {
+      mainText: '',
+      styleText: '',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  //ten
+  {
+    id: uuidv4(),
+    level: 10,
+    classes: {
+      first: 'leverTenFirst',
+      second: 'leverTenSecond',
+      third: 'leverTenThird',
+      four: 'leverTenFour',
+      five: 'leverTenFive',
+      six: 'leverTenSix',
+      seven: 'leverTenSeven',
+      eight: 'none',
+      nine: 'none',
+      ten: 'none',
+    },
+    correctAnswer: {
+      first: 'flex-direction: row-reverse; justify-content: start;',
+      second: 'flex-direction: row-reverse; justify-content: start',
+      third: [
+        'justify-content: start; flex-direction: row-reverse;',
+        'justify-content: start; flex-direction: row-reverse',
+      ],
+      four: 'none',
+    },
+    instruction: {
+      welcomeText: '',
+      justifyContentStyle: '',
+      welcomeTextFoot: '',
+    },
+    instructionFiveKey: {
+      mainText:
+        'Помоги лягушатам попасть на свои лилии. Хоть и кажется, что они почти на своих местах, всё же придётся применить и ',
+      styleText: 'flex-direction',
+      justText: ', и',
+      styleTextSecond: 'justify-content',
+      justTextSecond: ', чтобы поместить их на свои лилии.',
+    },
+    instructionSevenKey: {
+      mainText: '',
+      styleText: '',
+      justText: '',
+      styleTextSecond: '',
+      justTextSecond: '',
+      styleTextThird: '',
+      justTextThird: '',
+    },
+    flexStart: {
+      mainText:
+        'Заметь, что когда ты устанавливаешь направление в обратном порядке для ряда или колонки, начало (start) и конец (end) тоже меняются местами.',
+      styleText: '',
+    },
+    flexEnd: {
+      mainText: '',
+      styleText: '',
+    },
+    center: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceBetween: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceAround: {
+      mainText: '',
+      styleText: '',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  //eleven
+  {
+    id: uuidv4(),
+    level: 11,
+    classes: {
+      first: 'leverElevenFirst',
+      second: 'leverElevenSecond',
+      third: 'leverElevenThird',
+      four: 'leverElevenFour',
+      five: 'leverElevenFive',
+      six: 'leverElevenSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'leverElevenNine',
+      ten: 'none',
+    },
+    correctAnswer: {
+      first: 'flex-direction: column; justify-content: end;',
+      second: 'flex-direction: column; justify-content: end',
+      third: [
+        'justify-content: end; flex-direction: column;',
+        'justify-content: end; flex-direction: column',
+        'flex-direction: column; justify-content: flex-end;',
+        'flex-direction: column; justify-content: flex-end',
+        'justify-content: flex-end; flex-direction: column;',
+        'justify-content: flex-end; flex-direction: column',
+      ],
+      four: 'none',
+    },
+    instruction: {
+      welcomeText: '',
+      justifyContentStyle: '',
+      welcomeTextFoot: '',
+    },
+    instructionFiveKey: {
+      mainText: 'Помоги лягушатам найти их лилии с помощью',
+      styleText: 'flex-direction',
+      justText: ', и',
+      styleTextSecond: 'justify-content',
+      justTextSecond: '.',
+    },
+    instructionSevenKey: {
+      mainText: 'Заметь, когда в качестве направления выбрана колонка, то',
+      styleText: 'justify-content',
+      justText: 'влияет на вертикальное выравнивание, а',
+      styleTextSecond: 'align-items',
+      justTextSecond: 'влияет на вертикальное выравнивание, а',
+      styleTextThird: '',
+      justTextThird: '',
+    },
+    flexStart: {
+      mainText: '',
+      styleText: '',
+    },
+    flexEnd: {
+      mainText: '',
+      styleText: '',
+    },
+    center: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceBetween: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceAround: {
+      mainText: '',
+      styleText: '',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  // twelve
+  {
+    id: uuidv4(),
+    level: 12,
+    classes: {
+      first: 'levertwelveFirst',
+      second: 'levertwelveSecond',
+      third: 'levertwelveThird',
+      four: 'levertwelveFour',
+      five: 'levertwelveFive',
+      six: 'levertwelveSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'levertwelveNine',
+      ten: 'none',
+    },
+    correctAnswer: {
+      first: 'flex-direction: column-reverse; justify-content: space-between;',
+      second: 'flex-direction: column-reverse; justify-content: space-between',
+      third: [
+        'justify-content: space-between; flex-direction: column-reverse;',
+        'justify-content: space-between; flex-direction: column-reverse',
+      ],
+      four: 'none',
+    },
+    instruction: {
+      welcomeText: '',
+      justifyContentStyle: '',
+      welcomeTextFoot: '',
+    },
+    instructionFiveKey: {
+      mainText: 'Помоги лягушатам найти их лилии с помощью',
+      styleText: 'flex-direction',
+      justText: ', и',
+      styleTextSecond: 'justify-content',
+      justTextSecond: '.',
+    },
+    instructionSevenKey: {
+      mainText: '',
+      styleText: '',
+      justText: '',
+      styleTextSecond: '',
+      justTextSecond: '',
+      styleTextThird: '',
+      justTextThird: '',
+    },
+    flexStart: {
+      mainText: '',
+      styleText: '',
+    },
+    flexEnd: {
+      mainText: '',
+      styleText: '',
+    },
+    center: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceBetween: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceAround: {
+      mainText: '',
+      styleText: '',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  // thirteen
+  {
+    id: uuidv4(),
+    level: 13,
+    classes: {
+      first: 'leverthirteenFirst',
+      second: 'leverthirteenSecond',
+      third: 'leverthirteenThird',
+      four: 'leverthirteenFour',
+      five: 'leverthirteenFive',
+      six: 'leverthirteenSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'leverthirteenNine',
+      ten: 'none',
+    },
+    correctAnswer: {
+      first: 'none',
+      second: 'none',
+      third: [
+        'align-items: flex-end; justify-content: center; flex-direction: row-reverse;',
+        'justify-content: center; align-items: flex-end; flex-direction: row-reverse;',
+        'flex-direction: row-reverse; align-items: flex-end; justify-content: center;',
+        'align-items: flex-end; flex-direction: row-reverse; justify-content: center;',
+        'justify-content: center; flex-direction: row-reverse; align-items: flex-end;',
+        'flex-direction: row-reverse; justify-content: center; align-items: flex-end;',
+        'align-items: flex-end; justify-content: center; flex-direction: row-reverse',
+        'justify-content: center; align-items: flex-end; flex-direction: row-reverse',
+        'flex-direction: row-reverse; align-items: flex-end; justify-content: center',
+        'align-items: flex-end; flex-direction: row-reverse; justify-content: center',
+        'justify-content: center; flex-direction: row-reverse; align-items: flex-end',
+        'flex-direction: row-reverse; justify-content: center; align-items: flex-end',
+        'align-items: end; justify-content: center; flex-direction: row-reverse;',
+        'align-items: end; justify-content: center; flex-direction: row-reverse',
+        'justify-content: center; align-items: end; flex-direction: row-reverse;',
+        'justify-content: center; flex-direction: row-reverse; align-items: end;',
+        'flex-direction: row-reverse; justify-content: center; align-items: end;',
+        'flex-direction: row-reverse; align-items: end; justify-content: center;',
+        'align-items: end; flex-direction: row-reverse; justify-content: center;',
+        'align-items: end; justify-content: center; flex-direction: row-reverse',
+        'justify-content: center; align-items: end; flex-direction: row-reverse',
+        'justify-content: center; flex-direction: row-reverse; align-items: end',
+        'flex-direction: row-reverse; justify-content: center; align-items: end',
+        'flex-direction: row-reverse; align-items: end; justify-content: center',
+        'align-items: end; flex-direction: row-reverse; justify-content: center',
+      ],
+      four: 'none',
+    },
+    instruction: {
+      welcomeText: '',
+      justifyContentStyle: '',
+      welcomeTextFoot: '',
+    },
+    instructionFiveKey: {
+      mainText: '',
+      styleText: '',
+      justText: '',
+      styleTextSecond: '',
+      justTextSecond: '',
+    },
+    instructionSevenKey: {
+      mainText: 'Помоги лягушатам найти их лилии с помощью',
+      styleText: 'flex-direction',
+      justText: ',',
+      styleTextSecond: 'justify-content',
+      justTextSecond: 'и',
+      styleTextThird: 'align-items',
+      justTextThird: '.',
+    },
+    flexStart: {
+      mainText: '',
+      styleText: '',
+    },
+    flexEnd: {
+      mainText: '',
+      styleText: '',
+    },
+    center: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceBetween: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceAround: {
+      mainText: '',
+      styleText: '',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  // fourteen
+  {
+    id: uuidv4(),
+    level: 14,
+    classes: {
+      first: 'leverfourteenFirst',
+      second: 'leverfourteenSecond',
+      third: 'leverfourteenThird',
+      four: 'leverfourteenFour',
+      five: 'leverfourteenFive',
+      six: 'leverfourteenSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'leverfourteenNine',
+      ten: 'leverfourteenTen',
+    },
+    correctAnswer: {
+      first: `${'order:'} ${1};`,
+      second: `${'order:'} ${1}`,
+      third: ['none'],
+      four: 'none',
+    },
+    instruction: {
+      welcomeText:
+        'Иногда изменения порядка отображения элементов в контейнере недостаточно. В таких случаях мы можем применить свойство',
+      justifyContentStyle: 'order',
+      welcomeTextFoot:
+        'для конкретных элементов. По умолчанию, значение этого свойства у элементов равно 0, но мы можем задать положительное или отрицательное целое число этому свойству.',
+    },
+    instructionFiveKey: {
+      mainText: 'Используй свойство',
+      styleText: 'order',
+      justText: ', чтобы разместить лягушат на своих лилиях.',
+      styleTextSecond: '',
+      justTextSecond: '',
+    },
+    instructionSevenKey: {
+      mainText: '',
+      styleText: '',
+      justText: '',
+      styleTextSecond: '',
+      justTextSecond: '',
+      styleTextThird: '',
+      justTextThird: '',
+    },
+    flexStart: {
+      mainText: '',
+      styleText: '',
+    },
+    flexEnd: {
+      mainText: '',
+      styleText: '',
+    },
+    center: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceBetween: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceAround: {
+      mainText: '',
+      styleText: '',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  // fiveteen
+  {
+    id: uuidv4(),
+    level: 15,
+    classes: {
+      first: 'leverFiveteenFirst',
+      second: 'leverFiveteenSecond',
+      third: 'leverFiveteenThird',
+      four: 'leverFiveteenFour',
+      five: 'leverFiveteenFive',
+      six: 'leverFiveteenSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'leverFiveteenNine',
+      ten: 'leverFiveteenTen',
+    },
+    correctAnswer: {
+      first: `${'order:'} ${-1};`,
+      second: `${'order:'} ${-1}`,
+      third: ['none'],
+      four: 'none',
+    },
+    instruction: {
+      welcomeText: 'Используй свойство',
+      justifyContentStyle: 'order',
+      welcomeTextFoot: ', чтобы отправить красного лягушонка на его лилию.',
+    },
+    instructionFiveKey: {
+      mainText: '',
+      styleText: '',
+      justText: '',
+      styleTextSecond: '',
+      justTextSecond: '',
+    },
+    instructionSevenKey: {
+      mainText: '',
+      styleText: '',
+      justText: '',
+      styleTextSecond: '',
+      justTextSecond: '',
+      styleTextThird: '',
+      justTextThird: '',
+    },
+    flexStart: {
+      mainText: '',
+      styleText: '',
+    },
+    flexEnd: {
+      mainText: '',
+      styleText: '',
+    },
+    center: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceBetween: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceAround: {
+      mainText: '',
+      styleText: '',
+    },
+    justifyContent: {
+      forExample: '',
+      mainText: '',
+      styleText: '',
+    },
+    justifyContentEnd: {
+      mainText: '',
+      styleText: '',
+      dot: '',
+    },
+    sideBar: {
+      lilipads: [LilipudGreenMain],
+    },
+    froggyGreenMain: FrogGreen,
+    froggyGreenYellow: FrogYellow,
+    froggyGreenRed: FrogRed,
+  },
+  // sixteen
+  {
+    id: uuidv4(),
+    level: 16,
+    classes: {
+      first: 'leversixteenFirst',
+      second: 'leversixteenSecond',
+      third: 'leversixteenThird',
+      four: 'leversixteenFour',
+      five: 'leversixteenFive',
+      six: 'leversixteenSix',
+      seven: 'none',
+      eight: 'none',
+      nine: 'leversixteenNine',
+      ten: 'leversixteenTen',
+    },
+    correctAnswer: {
+      first: 'alignSelf: end;',
+      second: 'alignSelf: end',
+      third: ['none'],
+      four: 'none',
+    },
+    instruction: {
+      welcomeText: '',
+      justifyContentStyle: '',
+      welcomeTextFoot: '',
+    },
+    instructionFiveKey: {
+      mainText:
+        'Ещё одно свойство, которое ты можешь применить к определенному элементу — это',
+      styleText: 'align-self',
+      justText: '. Это свойство принимает те же значения, что и',
+      styleTextSecond: 'align-items',
+      justTextSecond:
+        '.Напишите camelCase Чтобы сработали стили.пример: alinSelf:',
+    },
+    instructionSevenKey: {
+      mainText: '',
+      styleText: '',
+      justText: '',
+      styleTextSecond: '',
+      justTextSecond: '',
+      styleTextThird: '',
+      justTextThird: '',
+    },
+    flexStart: {
+      mainText: '',
+      styleText: '',
+    },
+    flexEnd: {
+      mainText: '',
+      styleText: '',
+    },
+    center: {
+      mainText: '',
+      styleText: '',
+    },
+    spaceBetween: {
+      mainText: '',
+      styleText: '',
     },
     spaceAround: {
       mainText: '',

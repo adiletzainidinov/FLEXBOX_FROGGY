@@ -16,7 +16,7 @@ const Wrapper: FC = () => {
       {FLEXBOX_FROGGY.map((i) =>
         levelCount === i.level ? (
           <MuiBox key={i.id}>
-            <Header level={i.level} />
+            <Header level={i.level} levelCount={levelCount} />
             <Instruction
               classes={i.classes}
               instruction={i.instruction}
@@ -39,6 +39,7 @@ const Wrapper: FC = () => {
                 froggyGreenMain={i.froggyGreenMain}
                 froggyGreenYellow={i.froggyGreenYellow}
                 froggyGreenRed={i.froggyGreenRed}
+                levelCount={levelCount}
               />
             </Box>
           </MuiBox>

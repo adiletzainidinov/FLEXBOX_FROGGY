@@ -20,6 +20,7 @@ interface SideBarProps {
   };
   froggyGreenYellow: FC;
   froggyGreenRed: FC;
+  levelCount: number;
 }
 
 const SideBar: FC<SideBarProps> = ({
@@ -28,6 +29,7 @@ const SideBar: FC<SideBarProps> = ({
   froggyGreenMain,
   froggyGreenYellow,
   froggyGreenRed,
+  levelCount,
 }) => {
   const { inputValue } = useAppSelector((state) => state.froggy);
 
@@ -35,13 +37,33 @@ const SideBar: FC<SideBarProps> = ({
   const FroggyGreenYellowWithClass = withClassName(froggyGreenYellow);
   const FroggyGreenRedWithClass = withClassName(froggyGreenRed);
 
+  ('&> level[index]: levelStyles');
+
   return (
     <Box style={{ width: '100%', height: '100%' }}>
       <MuiBox className={classes.six} inputValue={inputValue}>
-        <FroggyGreenMainWithClass className={classes.first} />
-        <FroggyGreenYellowWithClass className={classes.second} />
-        <FroggyGreenRedWithClass className={classes.third} />
-        <FroggyGreenMainWithClass className={classes.four} />
+        <FroggyGreenMainWithClass
+          className={`${classes.first} leverFiveteenClass `}
+        />
+        {levelCount === 15 ? (
+          <FroggyGreenMainWithClass className={classes.first} />
+        ) : levelCount === 16 ? (
+          <FroggyGreenMainWithClass className={classes.first} />
+        ) : (
+          <FroggyGreenYellowWithClass className={classes.second} />
+        )}
+        {levelCount === 15 ? (
+          <FroggyGreenMainWithClass className={classes.first} />
+        ) : levelCount === 16 ? (
+          <FroggyGreenYellowWithClass className={classes.second} />
+        ) : (
+          <FroggyGreenRedWithClass className={classes.third} />
+        )}
+        {levelCount === 15 ? (
+          <FroggyGreenRedWithClass className={classes.third} />
+        ) : (
+          <FroggyGreenMainWithClass className={classes.four} />
+        )}
         <FroggyGreenMainWithClass className={classes.five} />
       </MuiBox>
       {sideBar.lilipads.map((LilyPadComponent, index) => {
@@ -61,3 +83,5 @@ const SideBar: FC<SideBarProps> = ({
 };
 
 export default SideBar;
+
+// style={inputValue.includes('order') ? { order: 1 } : {}}
