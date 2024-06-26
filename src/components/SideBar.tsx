@@ -4,8 +4,9 @@ import MuiBox from './MuiBox';
 import { useAppSelector } from '../hooks/hooks';
 import withClassName from './WithClassName';
 import LilipadsBox from './LilipadsBox';
+import { FlexboxFroggyLevel } from '../data/data';
 
-interface SideBarProps {
+interface SideBarProps extends FlexboxFroggyLevel {
   sideBar: {
     lilipads: FC[];
   };

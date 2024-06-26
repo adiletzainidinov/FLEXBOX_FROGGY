@@ -3,8 +3,8 @@ import React from 'react';
 const FrogGreen: React.FC = () => {
   return (
     <svg
-      display='none'
-      className='FroggyGreen'
+      display="none"
+      className="FroggyGreen"
       width="90px"
       height="90px"
       viewBox="0 0 210 210"
@@ -12,7 +12,22 @@ const FrogGreen: React.FC = () => {
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
+      style={{
+        animation: 'slidein 0.5s ease-in-out infinite alternate',
+      }}
     >
+      <style>
+        {`
+      @keyframes slidein {
+        from {
+          transform: scale(1.0);
+        }
+        to {
+          transform: scale(0.9);
+        }
+      }
+    `}
+      </style>
       <title>frog-green</title>
       <desc>Created with Sketch.</desc>
       <defs></defs>

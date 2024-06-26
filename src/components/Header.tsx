@@ -1,7 +1,8 @@
 import { Box, styled } from '@mui/material';
-import { FC, useState } from 'react';
+import { FC, useState, } from 'react';
 import { useAppDispatch } from '../hooks/hooks';
 import { levelCountValue } from '../store/slices/froggySlice/froggySlice';
+
 
 interface HeaderProps {
   level: number;
@@ -9,23 +10,27 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ level, levelCount }) => {
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
   const [currentLevel, setcurrentLevel] = useState(level);
 
   const handleIncrement = () => {
-    if (currentLevel < 16 || currentLevel > 1) {
+    if (currentLevel < 16) {
       setcurrentLevel((prev) => prev + 1);
-      dispatch(levelCountValue(levelCount + 1))
-
+      dispatch(levelCountValue(levelCount + 1));
     }
   };
   const handleDecrement = () => {
-    if (currentLevel < 16 || currentLevel > 1) {
+    if ( currentLevel > 1) {
       setcurrentLevel((prev) => prev - 1);
-      dispatch(levelCountValue(levelCount - 1))
+      dispatch(levelCountValue(levelCount - 1));
     }
   };
-  console.log(levelCount);
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newLevel = parseInt(e.target.value, 10);
+    setcurrentLevel(newLevel);
+    dispatch(levelCountValue(newLevel));
+  };
 
   return (
     <HeaderBox>
@@ -36,9 +41,19 @@ const Header: FC<HeaderProps> = ({ level, levelCount }) => {
             ◀
           </p>
         </Box>
-        <select>
-          <option>Уровень {level} из 24</option>
-        </select>
+        <Box className="selectBox">
+          <select
+            className="select"
+            value={currentLevel}
+            onChange={handleSelectChange}
+          >
+            {Array.from({ length: 16 }, (_, i) => (
+              <option className="option" key={i + 1} value={i + 1}>
+                Уровень {i + 1} из 24
+              </option>
+            ))}{' '}
+          </select>
+        </Box>
         <Box>
           <p onClick={handleIncrement} className="levelInputPBottom">
             ▶

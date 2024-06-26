@@ -10,7 +10,22 @@ const FroggyBlue: React.FC = () => {
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        style={{
+          animation: 'slidein 0.5s ease-in-out infinite alternate',
+        }}
       >
+            <style>
+        {`
+      @keyframes slidein {
+        from {
+          transform: scale(1.0);
+        }
+        to {
+          transform: scale(0.9);
+        }
+      }
+    `}
+      </style>
         <title>lilypad-green</title>
         <desc>Created with Sketch.</desc>
         <defs>

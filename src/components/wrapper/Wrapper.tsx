@@ -1,12 +1,12 @@
 import { Box, styled } from '@mui/material';
-import { FLEXBOX_FROGGY } from '../data/data';
-import Header from './Header';
+import { FLEXBOX_FROGGY } from '../../data/data';
+import Header from '../Header';
 import { FC } from 'react';
-import Instruction from './Instruction';
-import InputBox from './InputBox';
-import Footer from './Footer';
-import SideBar from './SideBar';
-import { useAppSelector } from '../hooks/hooks';
+import Instruction from '../Instruction';
+import InputBox from '../InputBox';
+import Footer from '../Footer';
+import SideBar from '../SideBar';
+import { useAppSelector } from '../../hooks/hooks';
 
 const Wrapper: FC = () => {
   const { levelCount } = useAppSelector((state) => state.froggy);

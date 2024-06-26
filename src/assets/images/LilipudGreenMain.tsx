@@ -13,4 +13,5 @@ const MuiBox = styled(Box)`
   border-radius: 100%;
   background-color: #288a2b;
   display: none;
+  
 `;

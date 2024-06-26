@@ -86,10 +86,11 @@ const InputBox: React.FC<InputBoxProps> = ({ levelCount }) => {
             />
             <p>{'}'}</p>
             <Button
-              style={{ marginTop: 30 }}
               type="submit"
               disabled={isDisabled}
-            >
+              className="nextButton"
+              style={{ marginTop: 30, color: 'white', opacity: isDisabled ? '0.5' : '1' }}
+              >
               Следующий
             </Button>
           </Box>
@@ -110,7 +111,12 @@ const InputBox: React.FC<InputBoxProps> = ({ levelCount }) => {
             <p className="flex">display: flex;</p>
             <Input value={inputV} onChange={(e) => setInputV(e.target.value)} />
             <p className="figure">{'}'}</p>
-            <Button type="submit" disabled={isDisabled}>
+            <Button
+              style={{ color: 'white', opacity:isDisabled ? '0.5' : '1' }}
+              type="submit"
+              disabled={isDisabled}
+              className="nextButton"
+            >
               Следующий
             </Button>
           </Box>
@@ -165,5 +171,17 @@ const BoxMui = styled(Box)`
       margin-left: 34.6875rem;
       margin-top: 74px;
     }
+  }
+  .nextButton {
+    @keyframes slidein {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(0.9);
+      }
+    }
+    animation: slidein 1s ease-in-out infinite alternate;
   }
 `;
