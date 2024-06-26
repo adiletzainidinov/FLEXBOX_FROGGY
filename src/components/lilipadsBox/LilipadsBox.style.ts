@@ -1,22 +1,6 @@
-import { Box, styled } from '@mui/material';
-import { FC, ReactNode } from 'react';
+import { Box, styled } from "@mui/material";
 
-interface LilipadsBoxType {
-  children?: ReactNode;
-  className?: string;
-}
-
-export const LilipadsBox: FC<LilipadsBoxType> = ({ className, children }) => {
-  return (
-    <LilipadsBoxContainer className={className}>
-      {children}
-    </LilipadsBoxContainer>
-  );
-};
-
-export default LilipadsBox;
-
-const LilipadsBoxContainer = styled(Box)`
+export const LilipadsBoxContainer = styled(Box)`
   .leverFirstFirst .LilipudGreenMain {
     display: block;
     position: absolute;

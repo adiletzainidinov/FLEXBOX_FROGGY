@@ -1307,7 +1307,7 @@ export const FLEXBOX_FROGGY: FlexboxFroggyLevel[] = [
       justText: '. Это свойство принимает те же значения, что и',
       styleTextSecond: 'align-items',
       justTextSecond:
-        '.Напишите camelCase Чтобы сработали стили.пример: alinSelf:',
+        '.Напишите camelCase Чтобы сработали стили.пример: alinSelf: И без flex',
     },
     instructionSevenKey: {
       mainText: '',

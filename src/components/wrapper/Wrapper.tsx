@@ -1,12 +1,13 @@
-import { Box, styled } from '@mui/material';
+import { Box } from '@mui/material';
 import { FLEXBOX_FROGGY } from '../../data/data';
-import Header from '../Header';
+import Header from '../header/Header';
 import { FC } from 'react';
-import Instruction from '../Instruction';
-import InputBox from '../InputBox';
-import Footer from '../Footer';
-import SideBar from '../SideBar';
+import Instruction from '../instruction/Instruction';
+import InputBox from '../inputBox/InputBox';
+import Footer from '../footer/Footer';
+import SideBar from '../sideBar/SideBar';
 import { useAppSelector } from '../../hooks/hooks';
+import { MuiBox } from './WrapperStyle';
 
 const Wrapper: FC = () => {
   const { levelCount } = useAppSelector((state) => state.froggy);
@@ -51,18 +52,6 @@ const Wrapper: FC = () => {
 
 export default Wrapper;
 
-const MuiBox = styled(Box)`
-  background-color: #43a047;
-  width: 100vw;
-  height: 100vh;
-  padding: 0 1.875rem;
-  .blueBox {
-    width: 45%;
-    height: 100vh;
-    background-color: #1f5768;
-    right: 4.375rem;
-    position: absolute;
-    top: 0;
-    padding: 30px;
-  }
-`;
+//Style
+
+MuiBox;

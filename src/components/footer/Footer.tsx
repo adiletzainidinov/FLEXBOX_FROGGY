@@ -1,6 +1,7 @@
-import { Box, Typography, styled } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { FC, useState } from 'react';
-import CustomModal from './UI/Modal';
+import CustomModal from '../UI/Modal';
+import { MuiBox, MuiBoxModal } from './FooterStyle';
 
 const Footer: FC = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -52,7 +53,7 @@ const Footer: FC = () => {
             <option>Кыргызча</option>
             <option>Englich</option>
           </select>
-          <Typography className='hardless'>Сложность</Typography>
+          <Typography className="hardless">Сложность</Typography>
           <Box className="newbie">
             <input type="radio" /> <Typography>Новичок</Typography>
           </Box>
@@ -79,79 +80,6 @@ const Footer: FC = () => {
 
 export default Footer;
 
-const MuiBox = styled(Box)`
-  width: 45%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  color: #d9ecda;
-  font-size: 14px;
-  a {
-    margin-left: 5px;
-    font-weight: 300;
-    font-size: 13px;
-  }
-  h4 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 300;
-    margin-bottom: 20px;
-
-    ul {
-      display: flex;
-      list-style: none;
-      li {
-        margin-left: 5px;
-        margin-bottom: 2px;
-      }
-    }
-  }
-  h5 {
-    font-weight: 300;
-    a {
-      font-size: 11px;
-    }
-  }
-  .setting {
-    a {
-      border: none;
-      padding-bottom: 2px;
-      font-weight: 900;
-      background-color: #69b36c;
-      padding: 3px 5px;
-      border-radius: 2px;
-      padding-bottom: 5px;
-    }
-  }
-`;
-
-const MuiBoxModal = styled(Box)`
-  .included,
-  .switchedOff,
-  .expert,
-  .average,
-  .newbie {
-    display: flex;
-    gap: 8px;
-  }
-  .language {
-    margin-bottom: 2px;
-  }
-  .hardless {
-    margin-top: 5px;
-    margin-bottom: 3px;
-  }
-  .expert {
-    margin-bottom: 10px;
-    margin-top: 2px;
-    input {
-      margin-bottom: 25px;
-    }
-  }
-  .switchedOff {
-    margin-top: 3px;
-  }
-`;
+// Style
+MuiBox;
+MuiBoxModal;

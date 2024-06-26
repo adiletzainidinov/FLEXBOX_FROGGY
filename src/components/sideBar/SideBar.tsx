@@ -1,28 +1,12 @@
 import { Box } from '@mui/material';
 import { FC } from 'react';
-import MuiBox from './MuiBox';
-import { useAppSelector } from '../hooks/hooks';
-import withClassName from './WithClassName';
-import LilipadsBox from './LilipadsBox';
-import { FlexboxFroggyLevel } from '../data/data';
+import MuiBox from '../muiBox/MuiBox';
+import { useAppSelector } from '../../hooks/hooks';
+import withClassName from '../../helpers/WithClassName';
+import LilipadsBox from '../lilipadsBox/LilipadsBox';
+import { SideBarProps } from '../../types/Types';
 
-interface SideBarProps extends FlexboxFroggyLevel {
-  sideBar: {
-    lilipads: FC[];
-  };
-  froggyGreenMain: FC;
-  classes: {
-    first?: string;
-    second?: string;
-    third?: string;
-    four?: string;
-    five?: string;
-    six?: string;
-  };
-  froggyGreenYellow: FC;
-  froggyGreenRed: FC;
-  levelCount: number;
-}
+
 
 const SideBar: FC<SideBarProps> = ({
   sideBar,
@@ -85,4 +69,3 @@ const SideBar: FC<SideBarProps> = ({
 
 export default SideBar;
 
-// style={inputValue.includes('order') ? { order: 1 } : {}}
