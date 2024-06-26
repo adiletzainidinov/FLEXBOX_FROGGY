@@ -1,4 +1,4 @@
-import { Box, styled } from "@mui/material";
+import { Box, styled } from '@mui/material';
 
 export const LilipadsBoxContainer = styled(Box)`
   .leverFirstFirst .LilipudGreenMain {
@@ -311,6 +311,7 @@ export const LilipadsBoxContainer = styled(Box)`
   .leverFiveteenFirst .LilipudGreenMain {
     top: 10px;
     left: 50px;
+    background-color: #cf1a17;
   }
   .leverFiveteenSecond .LilipudGreenMain {
     left: 190px;
